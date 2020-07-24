@@ -1,18 +1,31 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import Transaction from '../pages/Transaction'
-
-// import 'bootstrap/dist/css/bootstrap.min.css'
-// import 'font-awesome/css/font-awesome.min.css'
+import { Home } from '../components/Home'
+import { About } from '../components/About'
+import { NoMatch } from '../components/NoMatch'
+import Login from '../pages/Login'
+import { Layout } from '../components/Layout'
+import { NavigationBar } from '../components/NavigationBar'
 
 function App() {
     return (
-        <Router>
-            <Switch>
-                <Route path="/" exact component={Transaction} />
-            </Switch>
-        </Router>
+        <React.Fragment>
+            <NavigationBar />
+            <Layout>
+                <Router>
+                    <Switch>
+                        <Route path="/" exact component={Home} />
+                        <Route path="/about" exact component={About} />
+                        <Route component={NoMatch} />
+                    </Switch>
+                </Router>
+            </Layout>
+
+            <Router>
+                <Route path="/admin" exact component={Login} />
+            </Router>
+        </React.Fragment>
     )
 }
 
