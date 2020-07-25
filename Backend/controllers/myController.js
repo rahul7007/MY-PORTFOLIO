@@ -1,7 +1,7 @@
 const obj = require('../models/projectModel')
 const me = require('../models/myModel')
 
-insertData = (req, res) => {
+insertProjectData = (req, res) => {
     const prodData = {
         projectid: req.body.projectid,
         projectname: req.body.projectname,
@@ -106,11 +106,26 @@ const insertMyData = (req, res, next) => {
     })
 }
 
+getProjectId = async (req, res) => {
+    await obj.find({},{"_id": 0, "projectid":1 }, (err, file) => {     
+      if (err) {
+          return res.status(400).json({ success: false, error: err })
+      }  
+      if (!file) {
+          return res
+              .status(404)
+              .json({ success: false, error: `not found` })
+      }
+      return res.status(200).json({ success: true, data: file })
+  }).catch(err => console.log(err))
+}
+
 
 module.exports = {
     getData,
-    insertData,
+    insertProjectData,
     updateData,
     deleteData,
-    insertMyData
+    insertMyData,
+    getProjectId
 }

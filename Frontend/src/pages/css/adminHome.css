@@ -1,0 +1,21 @@
+body { 
+    padding-top:20px;
+}
+.panel-body .btn:not(.btn-block) { 
+    width:120px;margin-bottom:10px; 
+}
+
+.container{
+    border: 2px solid black;
+    text-align: center;
+}
+
+.box{
+    margin-top: 30px;
+    border: 2px solid red;
+    height: 130px;
+    background-color: #1aa3ff;
+    padding-top: 25px;
+    font-size: 30px;
+
+}

@@ -4,13 +4,15 @@ const api = axios.create({
     baseURL: 'http://localhost:5000/api',
 })
 
-export const insertData = payload => api.post(`/insert`, payload)
+export const insertProjectData = payload => api.post(`/insert`, payload)
 export const displayData = () => api.get(`/display`)
+export const getProjectsId = () => api.get(`/getAllProjectsId`)
 
 
 const apis = {
-    insertData,
+    insertProjectData,
     displayData,
+    getProjectsId
 }
 
 export default apis

@@ -18,6 +18,7 @@ const Styles = styled.div`
 
 
 export const NavigationBar = () =>(
+    <>
     <Styles>
         <Navbar expand="lg">
             <Navbar.Brand href="/">My Portfolio</Navbar.Brand>
@@ -30,4 +31,5 @@ export const NavigationBar = () =>(
             </Navbar.Collapse>
         </Navbar>
     </Styles>
+  </>
 )
