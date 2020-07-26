@@ -7,7 +7,7 @@ const router = express.Router()
 const upload = require('../middileware/upload')
 
 router.post('/insert', MbDetectCtrl.insertProjectData) //for projectModel
-router.get('/display', MbDetectCtrl.getData)
+router.get('/display', MbDetectCtrl.getProjectData)
 router.put('/update/:id', MbDetectCtrl.updateData)
 router.delete('/delete/:id', MbDetectCtrl.deleteData)
 router.post('/insertDetails', upload.single('avatar'), MbDetectCtrl.insertMyData) //for myModel

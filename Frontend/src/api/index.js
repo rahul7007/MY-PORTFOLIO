@@ -5,13 +5,13 @@ const api = axios.create({
 })
 
 export const insertProjectData = payload => api.post(`/insert`, payload)
-export const displayData = () => api.get(`/display`)
+export const displayProjectData = () => api.get(`/display`)
 export const getProjectsId = () => api.get(`/getAllProjectsId`)
 
 
 const apis = {
     insertProjectData,
-    displayData,
+    displayProjectData,
     getProjectsId
 }
 

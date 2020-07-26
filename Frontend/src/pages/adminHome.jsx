@@ -18,16 +18,16 @@ class AdminHome extends Component {
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-xs-6 col-md-6">
-                                            <a href="/editProjects">
                                             <div class="box">
                                                 About
                                             </div>
-                                            </a>
                                         {/* <a href="#" class="btn btn-danger btn-lg" role="button"><span class="glyphicon glyphicon-list-alt"></span> <br/>About</a> */}
                                         </div>
                                         <div class="col-xs-6 col-md-6">
                                         <div class="box">
+                                            <a href="/editProjects">
                                                 <p>Projects</p>
+                                            </a>
                                             </div>
                                         {/* <a href="#" class="btn btn-warning btn-lg" role="button"><span class="glyphicon glyphicon-bookmark"></span> <br/>Projects</a> */}
                                         </div>

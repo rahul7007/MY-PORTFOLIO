@@ -17,7 +17,7 @@ insertProjectData = (req, res) => {
     })
 }
 
-getData = async (req, res) => {
+getProjectData = async (req, res) => {
     await obj.find({}, (err, mbdetect) => {
         if (err) {
             return res.status(400).json({ success: false, error: err })
@@ -122,7 +122,7 @@ getProjectId = async (req, res) => {
 
 
 module.exports = {
-    getData,
+    getProjectData,
     insertProjectData,
     updateData,
     deleteData,

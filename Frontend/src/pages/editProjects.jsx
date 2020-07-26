@@ -1,7 +1,10 @@
 import React, { Component } from "react";
+import {Table, Button} from 'react-bootstrap';
 import api from "../api";
 import "./css/Login.css";
+import 'font-awesome/css/font-awesome.min.css';
 
+var projectDetailsArray = []
 class EditProjects extends Component {
   constructor(props) {
     super(props);
@@ -10,6 +13,10 @@ class EditProjects extends Component {
       projectName: "",
       tech: "",
       description: "",
+      displayId: '',
+      displayName: [],
+      displayTech: '',
+      displayDesc: '',
     };
   }
 
@@ -24,6 +31,17 @@ class EditProjects extends Component {
         projectIdArray: parseInt(last) + 1,
       });
     });
+
+    api.displayProjectData().then((res) =>{
+      projectDetailsArray = (res.data.data)
+      // for(var i=0; i<res.data.data.length; i++){
+      //   displayprojectId.push(res.data.data[i].projectid)
+      //   displayprojectName.push(res.data.data[i].projectname)
+      //   displayprojectTech.push(res.data.data[i].technology)
+      //   displayprojectDesc.push(res.data.data[i].description)
+      // }
+    })
+
   }
 
   add = () => {
@@ -44,6 +62,7 @@ class EditProjects extends Component {
   };
 
   render() {
+    console.log(projectDetailsArray)
     const { projectName, tech, description } = this.state;
     return (
       <React.Fragment>
@@ -61,18 +80,22 @@ class EditProjects extends Component {
                 <div class="panel-body">
                   <div class="row">
                     <div class="col-xs-6 col-md-6">
-                      <a href="#">
                         <div
                           class="box"
                           data-toggle="modal"
-                          data-target="#myModal"
+                          data-target="#addModal"
                         >
                           Add
                         </div>
-                      </a>
                     </div>
                     <div class="col-xs-6 col-md-6">
-                      <div class="box">Edit</div>
+                        <div
+                          class="box"
+                          data-toggle="modal"
+                          data-target="#editModal"
+                        >
+                          Edit
+                        </div>
                     </div>
                   </div>
                 </div>
@@ -80,7 +103,7 @@ class EditProjects extends Component {
             </div>
           </div>
         </div>
-        <div class="modal fade" id="myModal">
+        <div class="modal fade" id="addModal">
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
               <div class="modal-header">
@@ -159,6 +182,79 @@ class EditProjects extends Component {
             </div>
           </div>
         </div>
+
+        {/* EDIT */}
+
+        <div class="modal fade" id="editModal">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Edit projects</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                  &times;
+                </button>
+              </div>
+
+              <div class="modal-body">
+              <Table striped bordered hover variant="dark">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Technology</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{this.state.projectIdArray-1}</td>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>
+                      <i className="fa fa-pencil" aria-hidden="true"></i>
+                      <i className="fa fa-trash-o" aria-hidden="true"></i>
+                      </td>
+                  </tr>
+                  
+                  {
+                    projectDetailsArray.map(data=>(
+                    <tr>
+                      <td>{data.projectid}</td>
+                      <td>{data.projectname}</td>
+                      <td>{data.technology}</td>
+                      <td>{data.description}</td>
+                      <td>icon
+                      </td>
+                    </tr> ))
+                  }
+
+                    {/* {displayprojectName.map(data=>(
+                   <tr>
+                    
+                      <td>{data}</td>
+                      
+                  </tr> ))
+                    } */}
+                  
+                </tbody>
+              </Table>
+              </div>
+
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Button onClick={this.test}>Test Get Api</Button>
       </React.Fragment>
     );
   }
