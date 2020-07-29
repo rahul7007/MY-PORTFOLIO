@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+      body{
+        /* border: 2px dotted yellow; */
+        background: #0F2027;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to top, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-size:auto;
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -24,6 +36,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Aladin' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Atomic Age' rel='stylesheet'>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -35,7 +50,8 @@
     -->
     <title>React App</title>
   </head>
-  <body>
+  <!-- <body style="background-color: red;"> -->
+    <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--

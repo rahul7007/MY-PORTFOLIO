@@ -1,0 +1,29 @@
+.home-avatar{
+    height: 400px;
+    text-align: center;
+    object-fit: contain;
+}
+.social-profile{
+    font-size: 50px;
+    padding-top: 50px;
+}
+.tag-line{
+    font-size: 50px;
+    padding-top: 20px;
+    font-family: Atomic Age;
+    color: white;
+}
+.hr-design {
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+    border : 0;
+    height: 20px; 
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(173, 185, 130, 0.75), rgba(0, 0, 0, 0));
+    border-radius: 25px;
+}
+a{
+    color: rgb(255, 255, 255) !important;
+    font-weight: 500;
+    text-shadow: 0px 0px 20px black;
+}

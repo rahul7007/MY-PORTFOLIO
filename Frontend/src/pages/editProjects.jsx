@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import {Table, Button} from 'react-bootstrap';
 import api from "../api";
-import "./css/Login.css";
+//import "./css/Login.css";
 import 'font-awesome/css/font-awesome.min.css';
 
 var projectDetailsArray = []
@@ -60,6 +60,14 @@ class EditProjects extends Component {
       [event.target.name]: event.target.value,
     });
   };
+
+  editIcon = () => {
+    alert("Edit")
+  }
+
+  deleteIcon = () => {
+    alert("Delete")
+  }
 
   render() {
     console.log(projectDetailsArray)
@@ -225,7 +233,9 @@ class EditProjects extends Component {
                       <td>{data.projectname}</td>
                       <td>{data.technology}</td>
                       <td>{data.description}</td>
-                      <td>icon
+                      <td>
+                        <i onClick={this.editIcon} className="fa fa-pencil" aria-hidden="true"></i>
+                        <i onClick={this.deleteIcon} className="fa fa-trash-o" aria-hidden="true"></i>
                       </td>
                     </tr> ))
                   }

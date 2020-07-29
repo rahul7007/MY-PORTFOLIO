@@ -1,0 +1,12 @@
+.aboutme-left-div{
+    /* height: 600px; */
+    margin: auto;
+    /* background-color: #2C5364; */
+    border-radius: 200px 200px 0px 0px;
+    text-align: center;
+    color: black;
+}
+.about-me-avatar{
+    height: 200px;
+    text-align: center;
+}
