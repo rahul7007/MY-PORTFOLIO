@@ -1,12 +1,104 @@
+.heading{
+    font-family: Aldrich;
+    font-weight: bold;
+    color: #ffffb3;
+}
+.break{
+    background-color: #ffffb3;
+    width: 100%;
+}
+table{
+    margin: auto !important;
+    width: 70% !important;
+}
+td{
+    padding-left: 1em;
+}
 .aboutme-left-div{
-    /* height: 600px; */
-    margin: auto;
-    /* background-color: #2C5364; */
     border-radius: 200px 200px 0px 0px;
-    text-align: center;
+    background-color: #2C5364;
     color: black;
 }
 .about-me-avatar{
     height: 200px;
     text-align: center;
+    object-fit: contain;
 }
+.aboutme-cell{
+    color: white;
+    font-family:Black Han Sans;
+}
+.about-me-details{
+    font-family: Caveat Brush;
+    color: cornsilk;
+    text-align: left;
+}
+
+a {
+    color: #eff0a9 !important;
+    font-weight: 500;
+    text-shadow: 0px 0px 20px black;
+}
+
+.list-group-item.active{
+    background-color:rgba(231, 187, 187, 0.1)
+}
+.list-group-item{
+    border: none;
+    background-color: transparent;
+}
+.list-group-item:hover {
+    background-color:rgba(150, 140, 140, 0.1);
+  
+  }
+
+@media (min-width: 0px) and (max-width: 479px) {
+    .about-me-avatar {
+      height: 200px;
+    }
+    .aboutme-cell{
+        color: white;
+        font-family:Black Han Sans;
+        font-size: 30px;
+    }
+    .about-me-details{
+        font-size: 25px;
+    }
+    table{
+        margin: auto !important;
+        width: 100% !important;
+    }
+    td{
+        padding-left: 2.4em;
+    }
+  }
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .about-me-avatar {
+      height: 300px;
+    }
+
+    .aboutme-cell{
+        color: white;
+        font-family:Black Han Sans;
+        font-size: 30px;
+    }
+
+    .about-me-details{
+        font-size: 25px;
+    }
+    table{
+        margin: auto !important;
+        width: 100% !important;
+    }
+    td{
+        padding-left: 2.4em;
+    }
+  }
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .about-me-avatar {
+        height: 150px;
+    }
+  }
