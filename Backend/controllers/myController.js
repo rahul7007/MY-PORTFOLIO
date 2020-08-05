@@ -1,5 +1,6 @@
 const obj = require('../models/projectModel')
 const me = require('../models/myModel')
+const fast2sms = require('fast-two-sms')
 
 insertProjectData = (req, res) => {
     const prodData = {
@@ -121,11 +122,31 @@ getProjectId = async (req, res) => {
 }
 
 
+require('dotenv').config();
+const contactMe = async(req,res)=>{
+    try{
+    console.log("Correct")
+    //res.send("new message Sent")
+    var From = req.body.From
+    var Message = req.body.Message
+    console.log("From-->",From)
+    console.log("msg-->",Message)
+    // var From = "BoldTek"
+    // var msg="Got your number from your portfolio"
+    const response = await fast2sms.sendMessage({authorization : 'yLEiYO1srevPZcA8NKt7TRgUflh9bIWMw5Vm4pjFqnHkz0od6Q4CNiWR1YgZhBIroEO7dwAtJu9xzqsj' , message : '\n'+ From+'\n'+Message ,  numbers : ['9085895248'] }) //Asynchronous Function.
+    res.send(response)
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+
 module.exports = {
     getProjectData,
     insertProjectData,
     updateData,
     deleteData,
     insertMyData,
-    getProjectId
+    getProjectId,
+    contactMe
 }

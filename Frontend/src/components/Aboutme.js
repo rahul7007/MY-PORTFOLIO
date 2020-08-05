@@ -120,7 +120,7 @@ class About extends Component {
                         <div class="aboutme-cell">
                             H O B B Y
                         </div>
-                        <div class="row justify-content-md-center about-me-details" style={{fontSize:'10px'}}>
+                        <div class="row justify-content-md-center" style={{fontSize:'10px', color:'cornsilk', fontFamily: 'Caveat Brush'}}>
                             <div class="col-md-auto" style={{border:'0px solid'}} >
                             Music
                             <br />
@@ -148,6 +148,7 @@ class About extends Component {
                     </div>
                     {/***************************** Right div ******************************/}
                     <div class="col-sm-6" style={{border:'1px dotted yellow', textAlign:"justify", color: 'wheat'}}>
+                    <br />
                     <div>
                         <h3 class="heading">
                             RAHUL SARMA
@@ -213,9 +214,10 @@ class About extends Component {
                         <hr class="break" />
                     </div>
                     <div className="aboutme-description">
-                        @ 6 months internship in roboshala
-                        <br />
-                        @ Working as a software developer at BoldTek India Pvt. Ltd.
+                        <ul class="listStyle">
+                            <li>6 months internship in roboshala</li>
+                            <li>Working as a software developer at BoldTek India Pvt. Ltd.</li>
+                        </ul>
                     </div>
                     <br />
                     <div className="aboutme-heading">
@@ -225,7 +227,10 @@ class About extends Component {
                         <hr class="break" />
                     </div>
                     <div className="aboutme-description">
-                        * Gold star in HackerRank
+                        <ul class="listStyle">
+                            <li>Gold star in HackerRank</li>
+                            <li>Sliver star in HackerRank</li>
+                        </ul>
                         <br />
                     </div> 
                     {/***************************** Right div ******************************/}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Navbar.css'
+import Clock from '../components/Clock'
 
 class Navbar extends Component {
     render() { 
@@ -15,12 +16,14 @@ class Navbar extends Component {
                         <a class="nav-link" href="/" style={{color: 'white'}}>My Portfolio</a>
                     </li>
                     </ul>
-                    <span>
+                    <span style={{color:'white', textAlign:'right'}}>
                         {/* <a class="nav-link navbar-text" href="/" style={{color: 'white'}}>My Portfolio</a> */}
-                        <a class="nav-link navbar-text" href="/" style={{color: 'white'}}>Resume</a>
+                        <a class="nav-link navbar-text" href="/resume" style={{color: 'white'}}>Resume</a>
                         <a class="nav-link navbar-text" href="/projects" style={{color: 'white'}}>Projects</a>
                         <a class="nav-link navbar-text" href="/about" style={{color: 'white'}}>Aboutme</a>
                         <a class="nav-link navbar-text" href="/contact" style={{color: 'white'}}>Contact</a>
+                        <br />
+                        <Clock />
                     </span>
                 </div>
                 </nav>

@@ -7,12 +7,14 @@ const api = axios.create({
 export const insertProjectData = payload => api.post(`/insert`, payload)
 export const displayProjectData = () => api.get(`/display`)
 export const getProjectsId = () => api.get(`/getAllProjectsId`)
+export const sendTextMessage = payload => api.post(`/sendMessage`, payload)
 
 
 const apis = {
     insertProjectData,
     displayProjectData,
-    getProjectsId
+    getProjectsId,
+    sendTextMessage
 }
 
 export default apis
