@@ -7,7 +7,7 @@ import Projects from '../components/Projects'
 import Contact from '../components/Contact'
 import About from '../components/Aboutme'
 import Resume from '../components/Resume'
-
+import Weather from '../components/Weather'
 
 import AdminHome from '../pages/adminHome'
 import EditProjects from '../pages/editProjects'
@@ -26,6 +26,7 @@ function App() {
                     <Route path="/projects" exact component={Projects} />
                     <Route path="/contact" exact component={Contact} />
                     <Route path="/about" exact component={About} />
+                    <Route path="/weather" exact component={Weather} />
                        {/* <Route component={NoMatch} /> */}
                     </Switch>
                 </Router>

@@ -1,5 +1,6 @@
 .home-avatar{
-    height: 400px;
+    height: 100%;
+    width: 100%;
     text-align: center;
     object-fit: contain;
 }

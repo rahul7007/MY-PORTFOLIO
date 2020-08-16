@@ -9,33 +9,12 @@ class Contact extends Component {
         this.state={
             time: new Date(),
             alias: '',
+            org: '',
+            email: '',
+            phone:'',
             message: ''
         }
     }
-    // componentWillMount(){
-    //     setInterval(()=>
-    //         this.currentTime(), 1000        
-    //     )
-    // }
-
-    // currentTime(){
-    //     this.setState({
-    //         time: new Date()
-    //     })
-    // }
-
-    // click = () =>{
-    //     var url = "http://api.openweathermap.org/data/2.5/weather?appid=f196e1c1651f97563f531c7f465d8252&q="
-    //     var city = "guwahati"
-    //     url = url + city
-    //     fetch(url).then(response =>{
-    //         return response.json()
-    //     }).then(data=>{
-    //         console.log(data.main.humidity)
-    //     }).catch(error=>{
-    //         console.log(error)
-    //     })
-    // }
 
     onChange = (event) =>{
         this.setState({
@@ -45,29 +24,100 @@ class Contact extends Component {
 
     messageSendButton = () =>{
         var From = this.state.alias
+        var Organization = this.state.org
+        var Email = this.state.email
+        var Phone = this.state.phone
         var Message = this.state.message
-        const payload = { From, Message};
+        const payload = {From, Organization, Email, Phone, Message};
         api.sendTextMessage(payload).then((res =>{
-            alert(res.data)
+            //alert(res.data)
             alert(From)
+            alert(Organization)
+            alert(Email)
+            alert(Phone)
             alert(Message)
         }))
     }
 
-
-    render() { 
-        console.log(this.state.alias)
-        console.log(this.state.message)
+    render() {
 
         return (
-            <div>
-                <label>Enter your name</label>
-                <input type="text" id="alias" name="alias" onChange={this.onChange} value={this.state.alias} />
-                <br />
-                <label>Message</label>
-                <input type="text" id="message" name="message" onChange={this.onChange} value={this.state.message} />
-                <br />
-                <button onClick={this.messageSendButton}>Send Message</button>
+            <div class = "container contact-form">
+                <div class="contact-image">
+                    <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
+                </div>
+                <form>
+                <h3>Drop Your Message</h3>
+               <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input 
+                                type="text" 
+                                id="alias"
+                                class="form-control" 
+                                name="alias" 
+                                placeholder="Name*"
+                                autoComplete="off"
+                                onChange={this.onChange} 
+                                value={this.state.alias} 
+                            />
+                        </div>
+                        <div class="form-group">
+                            <input 
+                                type="text" 
+                                id="org"
+                                class="form-control" 
+                                name="org" 
+                                placeholder="Organization"
+                                autoComplete="off"
+                                onChange={this.onChange} 
+                                value={this.state.org} 
+                            />
+                        </div>
+                        <div class="form-group">
+                            <input 
+                                type="text" 
+                                id="email"
+                                class="form-control" 
+                                name="email" 
+                                placeholder="Email*"
+                                autoComplete="off"
+                                onChange={this.onChange} 
+                                value={this.state.email}
+                            />
+                        </div>
+                        <div class="form-group">
+                            <input 
+                                type="text" 
+                                id="phone"
+                                class="form-control" 
+                                name="phone" 
+                                placeholder="Phone*"
+                                autoComplete="off"
+                                onChange={this.onChange} 
+                                value={this.state.phone} 
+                            />
+                        </div>
+                        <div class="form-group">
+                            {/* <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" /> */}
+                            <button class="btnContact" onClick={this.messageSendButton}>Send</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <textarea 
+                                id="message"
+                                name="message"
+                                class="form-control"
+                                placeholder="Your Message *" 
+                                style={{width: '100%', height: '175px'}}
+                                onChange={this.onChange} 
+                                value={this.state.message}
+                            textarea />
+                        </div>
+                    </div>
+                </div>
+            </form>
             </div>
         );
     }

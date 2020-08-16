@@ -23,7 +23,7 @@ class Navbar extends Component {
                         <a class="nav-link navbar-text" href="/about" style={{color: 'white'}}>Aboutme</a>
                         <a class="nav-link navbar-text" href="/contact" style={{color: 'white'}}>Contact</a>
                         <br />
-                        <Clock />
+                        {/* <Clock /> */}
                     </span>
                 </div>
                 </nav>

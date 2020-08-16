@@ -128,12 +128,19 @@ const contactMe = async(req,res)=>{
     console.log("Correct")
     //res.send("new message Sent")
     var From = req.body.From
+    var Organization = req.body.Organization
+    var Email = req.body.Email
+    var Phone = req.body.Phone
     var Message = req.body.Message
     console.log("From-->",From)
     console.log("msg-->",Message)
     // var From = "BoldTek"
     // var msg="Got your number from your portfolio"
-    const response = await fast2sms.sendMessage({authorization : 'yLEiYO1srevPZcA8NKt7TRgUflh9bIWMw5Vm4pjFqnHkz0od6Q4CNiWR1YgZhBIroEO7dwAtJu9xzqsj' , message : '\n'+ From+'\n'+Message ,  numbers : ['9085895248'] }) //Asynchronous Function.
+    const response = await fast2sms.sendMessage({
+        authorization : 'yLEiYO1srevPZcA8NKt7TRgUflh9bIWMw5Vm4pjFqnHkz0od6Q4CNiWR1YgZhBIroEO7dwAtJu9xzqsj' , 
+        message : '\n'+ From +'\n'+ Organization +'\n' +Email +'\n'+ Phone +'\n'+ Message,
+        numbers : ['9085895248'] 
+    }) //Asynchronous Function.
     res.send(response)
     } catch (err) {
         console.log(err);

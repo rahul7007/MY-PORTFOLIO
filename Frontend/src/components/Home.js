@@ -1,16 +1,28 @@
 import React, { Component } from 'react';
 import avatar from './img/myavatar.png';
 import './Home.css'
+import Weather from './Weather'
+import Calender from './Calender'
 
 class Home extends Component {
     render() { 
         return ( 
             <div class="container">
-                <img 
-                    src={avatar}
-                    alt="avatar"
-                    className="home-avatar"
-                />
+                <div class="row" style={{border:'0px solid white'}}>
+                    <div class="col-sm-3" style={{border:'0px solid yellow'}}>
+                        <Calender />
+                    </div>
+                    <div class="col-sm-6" style={{border:'0px solid yellow'}}>
+                        <img 
+                            src={avatar}
+                            alt="avatar"
+                            className="home-avatar"
+                        />
+                    </div>
+                    <div class="col-sm-3">
+                        <Weather />
+                    </div>
+                </div>
                 <div className = "tag-line">
                     Welcome to My Profile
                 </div>
