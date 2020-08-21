@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import temp from './img/upderConstruction.png';
 import './Contact.css'
 import api from "../api";
+import bg from './img/con1.png';
 
 class Contact extends Component {
     constructor(){
@@ -42,14 +43,14 @@ class Contact extends Component {
     render() {
 
         return (
-            <div class = "container contact-form">
-                <div class="contact-image">
-                    <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
-                </div>
-                <form>
-                <h3>Drop Your Message</h3>
+            // <div class = "container contact-form">
+            <div>
+
                <div class="row">
-                    <div class="col-md-6">
+
+                    <div class="col-md-6 contact-form">
+                    <form>
+                        <h3 style={{color:'yellow'}}>Drop Your Message</h3>
                         <div class="form-group">
                             <input 
                                 type="text" 
@@ -99,12 +100,6 @@ class Contact extends Component {
                             />
                         </div>
                         <div class="form-group">
-                            {/* <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" /> */}
-                            <button class="btnContact" onClick={this.messageSendButton}>Send</button>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
                             <textarea 
                                 id="message"
                                 name="message"
@@ -115,9 +110,26 @@ class Contact extends Component {
                                 value={this.state.message}
                             textarea />
                         </div>
+                        <div class="form-group">
+                            {/* <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" /> */}
+                            <button class="btnContact" onClick={this.messageSendButton}>Send</button>
+                        </div>
+                    
+                    
+
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                            <img 
+                            src={bg}
+                            alt="background"
+                            // className="home-avatar"
+                            style={{width:'100%', height:'100%'}}
+                        />
                     </div>
                 </div>
-            </form>
+
+            
             </div>
         );
     }

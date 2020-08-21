@@ -1,11 +1,41 @@
 .abc{
     text-align: left;
+    border: 0px solid red;
 }
 .xyz{
-    text-align: right;
+    text-align: left;
+}
+.material-icons{
+    cursor: pointer
 }
 span{
     position:absolute;
     bottom:1;
     right:0;
+}
+ul{
+    margin-left: -10px;
+}
+li{
+    margin-left: -10px;
+}
+hr { 
+    color: gray; 
+    border-style: solid; 
+    height: 5px; 
+    width: 90%;
+    /* left: -10px; */
+}
+.project-links{
+    font-size: 50px;
+}
+.bot{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.click{
+    color: rgb(54, 102, 98) !important;
+    font-weight: 500;
+    text-shadow: 0px 0px 0px black;
 }
