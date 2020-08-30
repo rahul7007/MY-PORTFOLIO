@@ -55,7 +55,7 @@ class Calender extends Component {
                 <div className="quote">
                 <i>{this.state.quote}</i>
                 <br /><br />
-                <i style={{right:'10', position:'absolute'}}>-{this.state.author}</i>
+                <i>-{this.state.author}</i>
                 <br /><br />
                 </div>
 

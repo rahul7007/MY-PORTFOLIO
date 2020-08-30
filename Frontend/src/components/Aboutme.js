@@ -147,7 +147,7 @@ class About extends Component {
                     
                     </div>
                     {/***************************** Right div ******************************/}
-                    <div class="col-sm-6" style={{border:'1px dotted yellow', textAlign:"justify", color: 'wheat'}}>
+                    <div class="col-sm-6" style={{border:'4px dashed yellow', textAlign:"justify", color: 'wheat'}}>
                     <br />
                     <div>
                         <h3 class="heading">
@@ -162,7 +162,7 @@ class About extends Component {
                     <br />
                     <div className="aboutme-heading" >
                         <p style={{marginBottom:'-10px'}}>
-                            <b>EDUCATION (google analytics, 2 factor authentication)</b>
+                            <b>EDUCATION</b>
                         </p>
                         <hr class="break" />
                     </div>
@@ -178,29 +178,41 @@ class About extends Component {
                         </div>
                         <div class="col-8">
                             <div class="tab-content" id="nav-tabContent">
-                            <div class="tab-pane fade show active" id="list-mca" role="tabpanel" aria-labelledby="list-mca-list">
-                                * 2016-19 *
+                            <div class="tab-pane fade show active education-details" id="list-mca" role="tabpanel" aria-labelledby="list-mca-list">
+                                 2016-19 
                                 <br />
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-                                standard dummy text ever since the 1500s, when an unknown printer
+                                 Jorhat Engineering College, Jorhat
+                                <br />
+                                 CGPA - 7.2
+                                 <br />
+                                 Dibrugarh University
                             </div>
-                            <div class="tab-pane fade" id="list-bca" role="tabpanel" aria-labelledby="list-bca-list">
-                                * 2012-15 *
+                            <div class="tab-pane fade education-details" id="list-bca" role="tabpanel" aria-labelledby="list-bca-list">
+                                 2012-15 
                                 <br />
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-                                standard dummy text ever since the 1500s, when an unknown printer
+                                 Dispur College, Guwahati
+                                <br />
+                                 CGPA - 7.2
+                                 <br />
+                                 Gauhati University
                             </div>
-                            <div class="tab-pane fade" id="list-hs" role="tabpanel" aria-labelledby="list-hs-list">
-                                * 2010-12 *
+                            <div class="tab-pane fade education-details" id="list-hs" role="tabpanel" aria-labelledby="list-hs-list">
+                                 2010-12 
                                 <br />
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-                                standard dummy text ever since the 1500s, when an unknown printer
+                                 Arya Vidyapith HS, Guwahati
+                                <br />
+                                 Percentage - 63.4
+                                 <br />
+                                 AHSEC
                             </div>
-                            <div class="tab-pane fade" id="list-hslc" role="tabpanel" aria-labelledby="list-hslc-list">
-                                * 2010 *
+                            <div class="tab-pane fade education-details" id="list-hslc" role="tabpanel" aria-labelledby="list-hslc-list">
+                                 2010 
                                 <br />
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-                                standard dummy text ever since the 1500s, when an unknown printer
+                                 Ulubari HS School, Guwahati
+                                <br />
+                                 Percentage - 61.3
+                                 <br />
+                                 SEBA
                             </div>
                             </div>
                         </div>
@@ -228,8 +240,10 @@ class About extends Component {
                     </div>
                     <div className="aboutme-description">
                         <ul class="listStyle">
-                            <li>Gold star in HackerRank</li>
-                            <li>Sliver star in HackerRank</li>
+                            <li>Gold badge in <b>10 days of JS</b> HackerRank</li>
+                            <li>Sliver badge in <b>Python</b> HackerRank</li>
+                            <li>Bronze badge in <b>C programming</b> HackerRank</li>
+                            <li>Bronze badge in <b>30 days of code</b> HackerRank</li>
                         </ul>
                         <br />
                     </div> 

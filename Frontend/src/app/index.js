@@ -15,7 +15,7 @@ import EditProjects from '../pages/editProjects'
 function App() {
     return (
         <React.Fragment>
-        <div class="container" style = {{ border:'2px solid yellow'}}>
+        <div class="container" style = {{ border:'0px solid yellow'}}>
             <Navbar />
         
         {/* <div style = {{ border:'2px solid blue'}}> */}

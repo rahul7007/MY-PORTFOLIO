@@ -46,7 +46,9 @@ a {
 }
 
 .list-group-item.active{
-    background-color:rgba(231, 187, 187, 0.1)
+    /* background-color:rgba(231, 187, 187, 0.1) */
+    background-color:rgba(150, 140, 140, 0.1);
+    border: 2px solid;
 }
 .list-group-item{
     border: none;
@@ -56,6 +58,10 @@ a {
     background-color:rgba(150, 140, 140, 0.1);
   
   }
+.education-details{
+    font-size: 20px;
+    font-family: Alatsi;
+}
 
 @media (min-width: 0px) and (max-width: 479px) {
     .about-me-avatar {

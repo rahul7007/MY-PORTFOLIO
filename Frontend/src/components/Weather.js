@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './weather.css'
 //import weatherIcon from './img/few_clouds.gif';
 import loc from './img/location.png';
-var test = ''
+// const test = ''
+var link = ''
 class Weather extends Component {
     constructor(){
         super()
@@ -13,6 +14,7 @@ class Weather extends Component {
             city:'',
             icon:'',
             time: new Date(),
+            abc: ''
             //test:''
         }
     }
@@ -37,27 +39,32 @@ class Weather extends Component {
         const data = await response.json()
         const iconName = data.weather[0].icon
         const iconApi = await fetch('http://openweathermap.org/img/w/' + iconName + '.png')
-        test = './img/' + data.weather[0].main + '.gif'
+        const test = './img/' + data.weather[0].main + '.gif'
         console.log(iconApi.url)
+        console.log(test)
         this.setState({
             weather : data.main.temp,
             status : data.weather[0].main,
             icon : iconApi.url,
             country : data.sys.country,
             city : data.name,
-           
+            abc : test
         })
-        
+        console.log(test)
     }
 
     render() {
+        //link = './img/'+this.state.status+'.gif'
+        console.log(this.state.abc)
         return (
             <div style={{fontFamily: 'Amita'}}>
                 <div style={{fontSize:'50px', color:'white'}}>
                     <img 
                         //src={weatherIcon}
-                        src={require('./img/clear_sky.gif')}
+                        src={require('./img/Mist.gif')}
+                        // src={require(`${this.state.icon}`)}
                         style={{width:'100%', height:'100%'}}
+                        alt="nnn"
                     />
                 </div>
 

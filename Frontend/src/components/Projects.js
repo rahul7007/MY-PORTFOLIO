@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Projects.css'
-import image from './img/firstProject.png';
+import image from './img/p1.PNG';
 import ReactTooltip from 'react-tooltip'
 import developer from './img/developer.gif';
 import developer2 from './img/dev.gif'
@@ -33,6 +33,7 @@ class Projects extends Component {
 
         return (
           <React.Fragment>
+            <div style={{paddingBottom:'60px'}}>
             <div class="row" style={{border:'0px solid yellow'}}>
             <div class="col-sm-4">
                 {
@@ -46,10 +47,8 @@ class Projects extends Component {
                               Card title
                             </h5>
                             <p class="card-text">
-                              Some quick example text to build on the card title and make up the
-                              bulk of the card's content.
+                              This project is a technical portfolio built using MERN stack
                             </p>
-                            {this.state.frontSide}
                           </div>
                           <div class="col-sm-2 xyz">
                             <span class="material-icons " onClick={this.icon}>
@@ -72,7 +71,7 @@ class Projects extends Component {
                                 <li>Developed in MERN stack</li>
                                 <li>Weather api will show the weather status</li>
                                 <li>Qutes will be chenged on every page load</li>
-                                <li>Designed in pure bootstrap</li>
+                                <li>Styled with Bootstrap v4.3</li>
                               </ul>
                             </p>
                           </div>
@@ -110,18 +109,16 @@ class Projects extends Component {
                 {
                   (this.state.frontSideTwo === "y") ? <div style={{marginTop:'20px'}} >
                     <div class="card" style={{ width: "23rem", height: "28rem" }}>
-                      <img src={developer} class="card-img-top" alt="..." />
+                      <img src={developer} class="card-img-top" alt="..." style={{height:'265px'}} />
                       <div class="card-body abc">
                         <div class="row">
                           <div class="col-sm-10 abc">
                             <h5 class="card-title" onClick={this.icon}>
-                              Card title
+                              Next Project
                             </h5>
                             <p class="card-text">
-                              Some quick example text to build on the card title and make up the
-                              bulk of the card's content.
+                              Work in progress
                             </p>
-                            {this.state.frontSide}
                           </div>
                           <div class="col-sm-2 xyz">
                             <span class="material-icons " onClick={this.icon}>
@@ -181,18 +178,16 @@ class Projects extends Component {
                 {
                   (this.state.frontSideThree === "z") ? <div style={{marginTop:'20px'}} >
                     <div class="card" style={{ width: "23rem", height: "28rem" }}>
-                      <img src={developer2} class="card-img-top" alt="..." />
+                      <img src={developer2} class="card-img-top" alt="..." style={{height:'265px'}}  />
                       <div class="card-body abc">
                         <div class="row">
                           <div class="col-sm-10 abc">
                             <h5 class="card-title" onClick={this.icon}>
-                              Card title
+                              None
                             </h5>
                             <p class="card-text">
-                              Some quick example text to build on the card title and make up the
-                              bulk of the card's content.
+                              Coming soon
                             </p>
-                            {this.state.frontSide}
                           </div>
                           <div class="col-sm-2 xyz">
                             <span class="material-icons " onClick={this.icon}>
@@ -249,7 +244,7 @@ class Projects extends Component {
             </div>
             {/* End of extra */}
             </div>
-
+            </div>           
             </React.Fragment>
          );
     }
