@@ -24,7 +24,7 @@ class About extends Component {
                         <div class="about-me-details">
                         <table class="table-responsive">
                             <tr>
-                                <td><i style={{ fontSize:'17px', color:'#999584'}} class="fa fa-map-marker" aria-hidden="true" /></td>
+                                <td><i style={{ fontSize:'17px', color:'#999584'}} class="-map-marker" aria-hidden="true" /></td>
                                 <td>Guwahati, Assam</td>
                             </tr>
                         
