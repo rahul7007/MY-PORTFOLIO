@@ -15,14 +15,15 @@ class Calender extends Component {
         setInterval(()=>
             this.currentTime(), 1000        
         )
-        const url = 'https://programming-quotes-api.herokuapp.com/quotes/lang/en'
+        // const url = 'https://programming-quotes-api.herokuapp.com/quotes/lang/en'
+        const url = 'http://quotes.stormconsultancy.co.uk/quotes.json'
         const response = await fetch(url)
         const data = await response.json()
-        console.log(data)
+        console.log("quote is",data)
         console.log(typeof(data))
         var obj = data[Math.floor(Math.random() * data.length)]
-        console.log(obj.en)
-        const quote = obj.en
+        console.log(obj.quote)
+        const quote = obj.quote
         const author = obj.author
         this.setState({
             quote: quote,

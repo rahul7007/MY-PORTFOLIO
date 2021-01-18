@@ -55,7 +55,7 @@ class Weather extends Component {
 
     render() {
         //link = './img/'+this.state.status+'.gif'
-        console.log(this.state.abc)
+        // console.log(this.state.abc)
         return (
             <div style={{fontFamily: 'Amita'}}>
                 <div style={{fontSize:'50px', color:'white'}}>
