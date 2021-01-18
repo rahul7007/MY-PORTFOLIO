@@ -14,8 +14,8 @@ app.use(bodyParser.json())
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
-app.get('/abcd', (req, res) => {
-    res.send('Hello World ABCD!')
+app.get('/', (req, res) => {
+    res.send('Hello World!')
 })
 
 app.use('/api', mbDetectRouter)
