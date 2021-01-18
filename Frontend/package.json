@@ -1,6 +1,6 @@
-{
+{ 
   "homepage": "http://rahul7007.github.io/MY-PORTFOLIO",
-  "name": "crud",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
