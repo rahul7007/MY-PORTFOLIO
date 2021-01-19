@@ -24,7 +24,7 @@ class Home extends Component {
                     </div>
                 </div>
                 <div className = "tag-line">
-                    welcome to my profile
+                    welcome to my new profile
                 </div>
                 <hr className="hr-design"/>
                 <div class= "row social-profile">
