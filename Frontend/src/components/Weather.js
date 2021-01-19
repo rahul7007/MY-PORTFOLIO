@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './weather.css'
 //import weatherIcon from './img/few_clouds.gif';
 import loc from './img/location.png';
-// const test = ''
-var link = ''
+require('dotenv').config()
+const ABC = process.env
 class Weather extends Component {
     constructor(){
         super()
@@ -34,6 +34,7 @@ class Weather extends Component {
     async componentDidMount(){
         const url = 'http://api.openweathermap.org/data/2.5/'
         const key = 'f196e1c1651f97563f531c7f465d8252'
+        console.log("key",process.env.REACT_APP_BOTOR)
         // const response = await fetch(url)
         const response = await fetch(`${url}weather?q=Guwahati&units=metric&APPID=${key}`)
         const data = await response.json()
@@ -51,6 +52,10 @@ class Weather extends Component {
             abc : test
         })
         console.log(test)
+    }
+
+    test = () =>{
+        console.log(ABC)
     }
 
     render() {
@@ -84,6 +89,7 @@ class Weather extends Component {
                 <div className="time" style={{color:'white', fontSize:'50px', fontFamily:'Monoton'}}>
                     {this.state.time.toLocaleTimeString('it-IT')}
                 </div>
+                <button onClick={this.test}>ABC</button>
             </div>
         );
     }
