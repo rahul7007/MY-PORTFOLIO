@@ -30,7 +30,7 @@ class Weather extends Component {
     } 
 
     async componentDidMount(){
-        const url = 'http://api.openweathermap.org/data/2.5/'
+        const url = 'https://api.openweathermap.org/data/2.5/'
         // const key = 'f196e1c1651f97563f531c7f465d8252'
         console.log("key",process.env.REACT_APP_BOTOR)
         // const response = await fetch(url)
