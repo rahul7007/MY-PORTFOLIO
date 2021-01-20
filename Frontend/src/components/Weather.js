@@ -37,7 +37,7 @@ class Weather extends Component {
         const response = await fetch(`${url}weather?q=Guwahati&units=metric&APPID=${process.env.REACT_APP_WEATHER}`)
         const data = await response.json()
         const iconName = data.weather[0].icon
-        const iconApi = await fetch('http://openweathermap.org/img/w/' + iconName + '.png')
+        const iconApi = await fetch('https://openweathermap.org/img/w/' + iconName + '.png')
         const test = './img/' + data.weather[0].main + '.gif'
         console.log(iconApi.url)
         console.log(test)
