@@ -16,7 +16,6 @@ class Calender extends Component {
             this.currentTime(), 1000        
         )
         const url = process.env.REACT_APP_QUOTE
-        alert(url)
         const response = await fetch(url)
         const data = await response.json()
         console.log("quote is",data)
