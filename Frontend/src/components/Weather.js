@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import './weather.css'
 //import weatherIcon from './img/few_clouds.gif';
 import loc from './img/location.png';
-require('dotenv').config()
-const ABC = process.env
 class Weather extends Component {
     constructor(){
         super()
@@ -33,10 +31,10 @@ class Weather extends Component {
 
     async componentDidMount(){
         const url = 'http://api.openweathermap.org/data/2.5/'
-        const key = 'f196e1c1651f97563f531c7f465d8252'
+        // const key = 'f196e1c1651f97563f531c7f465d8252'
         console.log("key",process.env.REACT_APP_BOTOR)
         // const response = await fetch(url)
-        const response = await fetch(`${url}weather?q=Guwahati&units=metric&APPID=${key}`)
+        const response = await fetch(`${url}weather?q=Guwahati&units=metric&APPID=${process.env.REACT_APP_WEATHER}`)
         const data = await response.json()
         const iconName = data.weather[0].icon
         const iconApi = await fetch('http://openweathermap.org/img/w/' + iconName + '.png')
@@ -54,9 +52,6 @@ class Weather extends Component {
         console.log(test)
     }
 
-    test = () =>{
-        console.log(ABC)
-    }
 
     render() {
         //link = './img/'+this.state.status+'.gif'
@@ -89,7 +84,6 @@ class Weather extends Component {
                 <div className="time" style={{color:'white', fontSize:'50px', fontFamily:'Monoton'}}>
                     {this.state.time.toLocaleTimeString('it-IT')}
                 </div>
-                <button onClick={this.test}>ABC</button>
             </div>
         );
     }

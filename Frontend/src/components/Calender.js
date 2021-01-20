@@ -15,8 +15,8 @@ class Calender extends Component {
         setInterval(()=>
             this.currentTime(), 1000        
         )
-        // const url = 'https://programming-quotes-api.herokuapp.com/quotes/lang/en'
-        const url = 'http://quotes.stormconsultancy.co.uk/quotes.json'
+        const url = process.env.REACT_APP_QUOTE
+        alert(url)
         const response = await fetch(url)
         const data = await response.json()
         console.log("quote is",data)
